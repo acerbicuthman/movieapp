@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Movie App</title>
+</head>
+
+<body>
+    <div class="menus">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                <div class="logo">
+                <img
+                    src="./images/netflix.jpg"
+                    class="img-fluid rounded-top"
+                    alt=""
+                />
+                <h2></h2>
+            </div>
+        </a>
+            <form id="form">
+            <input type="text" placeholder="searchmovies" id="search">
+        </form>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Movies</a></li>
+            <li><a href="#tv-shows">TV Shows</a></li>
+        </ul>
+            </nav>
+
+        </div>
+    </div>
+    <header class="header">
+        <div class="slider-container">
+            <div class="slide active" style="background-image: url('images/peaky\ one.webp');">
+                <div class="slide-content">
+                    <h2 class="movie-title">Peaky Blinders</h2>
+                    <p class="movie-desc">A gritty British crime drama following the Shelby family, leaders of the Peaky
+                        Blinders gang, as they navigate the criminal underworld and political intrigue in post-WWI
+                        Birmingham, England.</p>
+                    <div class="movie-details">
+                        <p class="category">Crime</p>
+                        <p class="category">Drama </p>
+                        <p class="category">Historical </p>
+                        <p class="year"> 2013–2022</p>
+                    </div>
+                    <button type="button">
+                        <i class="fas fa-circle-play">Watch Now </i>
+                    </button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/breakingbad.webp');">
+                <div class="slide-content">
+                    <h2 class="movie-title">Breaking Bad </h2>
+                    <p class="movie-desc"> A gripping tale of Walter White, a high school chemistry teacher turned
+                        methamphetamine manufacturer, and his descent into the criminal world alongside his partner,
+                        Jesse Pinkman.</p>
+                    <div class="movie-details">
+                        <p class="category">Crime</p>
+                        <p class="category">Drama </p>
+                        <p class="category">Thriller </p>
+                        <p class="year">2008–2013</p>
+                    </div>
+                    <button type="button">
+                        <i class="fas fa-circle-play">Watch Now </i>
+                    </button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/bettercallsaul1.webp');">
+                <div class="slide-content">
+                    <h2 class="movie-title">Better Call Saul
+                    </h2>
+                    <p class="movie-desc">A masterful prequel to Breaking Bad, this series delves into the transformation of Jimmy
+                    McGill, a small-time lawyer, into the morally flexible Saul Goodman, set against a backdrop of legal
+                    battles and criminal schemes.</p>
+                    <div class="movie-details">
+                        <p class="category">Crime</p>
+                        <p class="category">Drama </p>
+                        <p class="year">2015–2022</p>
+                    </div>
+                    <button type="button">
+                        <i class="fas fa-circle-play">Watch Now </i>
+                    </button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/gamesofthrones1.jpg');">
+                <div class="slide-content">
+                    <h2 class="movie-title">Game of Thrones
+
+                    </h2>
+                    <p class="movie-desc">A sprawling fantasy epic set in the world of Westeros, where noble families vie for control of
+                    the Iron Throne amid war, betrayal, and the looming threat of the undead.</p>
+                    <div class="movie-details">
+                        <p class="category">Fantasy</p>
+                        <p class="category">Adventure </p>
+                        <p class="category">Drama </p>
+                        <p class="year">2011–2019</p>
+                    </div>
+                    <button type="button">
+                        <i class="fas fa-circle-play">Watch Now </i>
+                    </button>
+                </div>
+            </div>
+
+            <button class="arrow left-arrow" id="left">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="arrow right-arrow" id="right">
+                <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </header>
+    <div class="movies-content" id="tv-shows">
+        <div class="container">
+        <h1 class="label">Tv Shows</h1>
+        <div class="Tv-details">
+            <!-- <div class="tvShows">
+                <img src="images/sunshine.avif" alt="">
+                <p class="movie-title">Peaky Blinders</p>
+                <div class="movie-desc">
+                <p class="movie year">2012</p>
+                <p class="rating">8.0 </p>
+            </div>
+            </div> -->
+            
+        </div>
+    </div>  
+    </div>
+    <!-- /*<-------------------pagination-----------------------------> 
+    <div class="container">
+        <div class="pagination">
+            <ul>
+                <li>Previous</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>Next</li>
+
+            </ul>
+        </div>
+    </div>
+    <script src="index.js"> </script>
+    <script src="main.js"></script>
+</body>
+
+</html> 
