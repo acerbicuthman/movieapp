@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Navbar container */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+        }
+
+        /* Logo image */
+        .logo img {
+            height: 60px;
+            width: 60px;
+            object-fit: cover;
+            border-radius: 10%;
+        }
+
+        /* Navbar form (search bar) */
+        nav form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav input {
+            padding: 5px;
+            width: 200px;
+        }
+
+        /* Main navbar links */
+        .fullNav ul {
+            display: flex;
+            list-style: none;
+            gap: 12px;
+        }
+
+        .fullNav ul li {
+            margin: 0;
+        }
+
+        .fullNav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .fullNav ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Side navigation (hidden by default) */
+        .sidenav {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            height: 100%;
+            width: 0;
+            color: white;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            top: 10px;
+        }
+
+        .sidenav a {
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            background-color: #575757;
+        }
+
+        /* Hamburger icon */
+        .sidenavToggle {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            display: none; /* Hidden by default */
+        }
+
+        /* Media Query for mobile responsiveness */
+        @media (max-width: 768px) {
+            .fullNav {
+                display: none; /* Hide the full navbar links on small screens */
+            }
+
+            .sidenavToggle {
+                display: block; /* Show the hamburger icon on small screens */
+            }
+
+            .sidenav {
+                
+                display: block; /* Make the side navigation visible on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/netflix.jpg" alt="Logo" />
+            </a>
+        </div>
+        
+        <div>
+            <form id="form">
+                <input type="text" placeholder="Search movies" id="search">
+            </form>
+        </div>
+
+        <div class="fullNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="tv-shows.html">TV Shows</a></li>
+            </ul>
+        </div>
+
+        <!-- Side Navigation (Hamburger Menu) -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <ul>
+                <li><a onclick="closeNav()" href="index.html">Home</a></li>
+                <li><a onclick="closeNav()" href="#movies">Movies</a></li>
+                <li><a onclick="closeNav()" href="tv-shows.html">TV Shows</a></li>
+            </ul>
+            <p>bgvhgnb</p>
+        </div>
+
+        <!-- Hamburger Icon (appears on small screens) -->
+        <span class="sidenavToggle" onclick="openNav()">&#9776;</span>
+    </nav>
+
+    <script>
+        // Open side navigation
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        // Close side navigation
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+</html>

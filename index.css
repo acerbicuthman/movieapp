@@ -9,29 +9,7 @@ html{
     scroll-behavior: smooth ;
 }
 
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    /* overflow: hidden; */
-    background-position: center center;
-    background-size: cover;
-    /* background-image: url('images/treenature.avif'); */
-    transition: all 0.5s ease-in-out;
-}
 
-header::before{
-    content: "";
-    position: absolute;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    width: 100%;
-   background-color: rgba(0, 0, 0, 0.7);
-    z-index: -1;
-
-}
 .menus.sticky{
     background-color: rgba(0, 0, 0, 0.56);
     color: white;
@@ -58,24 +36,7 @@ img{
 
 }
 
-/*--------------------menu-----------------*/
-.menus{
-position: fixed;
-top: 0;
-width: 100%;
-z-index: 10;
-padding: 1rem 0;
-}
-.menus .logo img{
-width: 100px;
-height: 100px;
-}
-nav{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    align-items: center;
-}
+
 .logo{
     display: flex;
     align-items: center;
@@ -88,6 +49,7 @@ nav ul{
     align-items: center;
     list-style: none ;
 }
+
 nav ul li a{
     color: beige;
     text-decoration: none; 
@@ -105,10 +67,181 @@ form input{
     font-family: inherit;
     background-color: lightgrey;
 }
+@media screen and (max-width: 425px) {
+    form input{
+        width: 150px;
+    }
+    .logo h2{
+        display: none;
+        
+    }
+    .img-fluid{
+        width: 50px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 768px) {
+    form input{
+        width: 150px;
+    }
+}
+@media screen and (max-width:1024px) {
+    form input{
+        width: 150px;
+    }
+}
+/* ==================================================================*/
+.fullNav ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+}
+
+.fullNav ul li {
+    margin: 0;
+}
+
+.fullNav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.fullNav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Side navigation (hidden by default) */
+.sidenav {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    color: white;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+  
+}
+.sidenav ul{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.sidenav ul li{
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    background-color: #575757;
+    color: #f1f1f1;
+
+}
+
+/* Hamburger icon */
+.sidenavToggle {
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+    display: none; /* Hidden by default */
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 768px) {
+    .fullNav {
+        display: none; /* Hide the full navbar links on small screens */
+    }
+
+    .sidenavToggle {
+        display: block; /* Show the hamburger icon on small screens */
+    }
+
+    .sidenav {
+        
+        display: block; /* Make the side navigation visible on small screens */
+    }
+}
+@media (max-width: 1024px) {
+    .fullNav {
+        display: none; /* Hide the full navbar links on small screens */
+    }
+
+    .sidenavToggle {
+        display: block; /* Show the hamburger icon on small screens */
+    }
+
+    .sidenav {
+        
+        display: block; /* Make the side navigation visible on small screens */
+    }
+}
+
+    .closebtn{
+        top: 0;
+        left: 0;
+        font-size: 50px;
+        text-decoration: none;
+        color: #ddd;
+
+    }
+
+/*--------------------menu-----------------*/
+.menus{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem 0;
+    }
+    .menus .logo img{
+    width: 100px;
+    height: 100px;
+    }
+    nav{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /*===============================================================*/
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        /* overflow: hidden; */
+        background-position: center center;
+        background-size: cover;
+        /* background-image: url('images/treenature.avif'); */
+        transition: all 0.5s ease-in-out;
+    }
+    
+    header::before{
+        content: "";
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        width: 100%;
+       background-color: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    
+    }
+    
 .slider-container{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     height: 70vh;
-    width: 70vw;
+    width: 80vw;
     position: relative;
     overflow: hidden;
     border: 3px solid #ddd;
@@ -133,43 +266,16 @@ form input{
 
 }
 
-.arrow{
-    position: absolute;
-    background: rgba(0, 0, 0, 0.07);
-    color: black;
-    padding: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    border-radius: 5%;
-    z-index: 5;
-    
-}
-.arrow{
-    font-size: 1.5rem;
-}
-.arrow:focus{
-    outline: none;
-}
-.left-arrow {
-    left: 0px;
-}
-.right-arrow {
-    right: 0px;
-}
-button{
-    outline: none;
-    border: none;
-}
 .slide-content{
     position: relative;
-    top: 67%;
+    top: 50%;
     left: 55%;
     transform: translate(-50%, -50%);
     padding: 4rem;
     background-color: rgba(0, 0, 0, 0.23);
     /* color: white; */
 }
+
 .slide-content.active{
      opacity: 1; 
     transform: translate(-50%, -50%); 
@@ -219,12 +325,187 @@ button{
     cursor: pointer;
     margin-bottom: 190px;
 }
+
+@media screen and (max-width:425px) {
+    header{
+        height: 100%;
+    }
+    .slide{
+       
+        height: 100vw;
+        width: 100vw;
+        padding-bottom: 30px;
+    }
+    .slide-content h2, .movie-title{
+        font-size: 2rem;
+        white-space: nowrap;
+        
+    }
+    .slide-content{
+       max-height: fit-content;
+        padding: 0 2px;
+        top: 25%;
+        width: 100vw;
+    }
+    .slider-container{
+        height: 100vw;
+    }
+
+    .movie-details{
+        color: white;
+        justify-content: space-between;
+        width: 50%;
+        max-width: 85vw;
+        gap: 2px;
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .movie-details .category{
+        color: white;
+        background: #eb984e;
+        border-radius: 10px;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+    .movie-details .year{
+        color: white;
+        background: rgb(84, 135, 7);
+        border-radius: 10px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:768px) {
+    header{
+        height: 100%;
+    }
+    .slide{
+       
+        height: 100vw;
+        width: 100vw;
+        padding-bottom: 30px;
+    }
+    .slide-content h2, .movie-title{
+        font-size: 2rem;
+        white-space: nowrap;
+        
+    }
+    .slide-content{
+       max-height: fit-content;
+        padding: 0 2px;
+        top: 25%;
+        width: 100vw;
+    }
+    .slider-container{
+        height: 100vw;
+    }
+
+    .movie-details{
+        color: white;
+        justify-content: space-between;
+        width: 50%;
+        max-width: 85vw;
+        gap: 2px;
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .movie-details .category{
+        color: white;
+        background: #eb984e;
+        border-radius: 10px;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+    .movie-details .year{
+        color: white;
+        background: rgb(84, 135, 7);
+        border-radius: 10px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:1024px) {
+    header{
+        height: 100%;
+    }
+    .slide{
+       
+        height: 100vw;
+        width: 100vw;
+        padding-bottom: 30px;
+    }
+    .slide-content h2, .movie-title{
+        font-size: 2rem;
+        white-space: nowrap;
+        
+    }
+    .slide-content{
+       max-height: fit-content;
+        padding: 0 2px;
+        top: 25%;
+        width: 100vw;
+    }
+    .slider-container{
+        height: 100vw;
+    }
+
+    .movie-details{
+        color: white;
+        justify-content: space-between;
+        width: 50%;
+        max-width: 85vw;
+        gap: 2px;
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .movie-details .category{
+        color: white;
+        background: #eb984e;
+        border-radius: 10px;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+    .movie-details .year{
+        color: white;
+        background: rgb(84, 135, 7);
+        border-radius: 10px;
+        font-size: 12px;
+    }
+}
+/*====================================================*/
+.arrow{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.07);
+    
+    color: black;
+    padding: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 5%;
+    z-index: 5;
+    
+}
+.arrow{
+    font-size: 1.5rem;
+    border-radius: 3px;
+    border-color: #f1f1f1;
+}
+.arrow:focus{
+    outline: none;
+}
+.left-arrow {
+    left: 0px;
+}
+.right-arrow {
+    right: 0px;
+}
+button{
+    outline: none;
+    border: none;
+}
 .container{
     max-width: 1440px;
     margin-left: 10px;
     padding: 0 1rem;
-
-   
 }
 .label{
     margin: 2rem 0;
@@ -235,8 +516,6 @@ button{
     flex-wrap: wrap;
     column-gap: 1.5rem;
     row-gap: 2rem;
- 
-
 }
 .movies,
 .tvShows{
@@ -289,6 +568,35 @@ transform: translateY(70%);
     transform: translate(0%);
     transition: all 0.5s ease-in;
 }
+@media screen and (max-width: 425px) {
+    .movie-desc{
+        display: block;
+        top: 3;
+        width: 100vw;
+        max-width: 100vw;
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .movie-desc{
+        display: block;
+        margin-top:20px;
+        width: 100vw;
+        max-width: 100vw;
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+    .movies-details,  
+.Tv-details{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+}
+}
+
+/*===========================================================*/
 /*pagination*/
 .pagination{
     padding: 4rem 0;
@@ -318,4 +626,46 @@ transform: translateY(70%);
 }
 a{
     color: brown;
+}
+@media screen and (max-width: 425px) {
+    .pagination{
+        width: 100%;
+
+    }
+    .pagination ul{
+        max-width: 350px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .pagination{
+        width: 100%;
+
+    }
+    .pagination ul{
+        max-width: 350px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .pagination{
+        width: 100%;
+
+    }
+    .pagination ul{
+        max-width: 750px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 }

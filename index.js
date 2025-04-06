@@ -68,3 +68,33 @@ leftButton.addEventListener("click",()=> {
 
 // Auto-slide every 7 seconds
 setInterval(nextSlide, 7000);
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px"
+    localStorage.setItem("sidenavOpen", "true"); // Save the state in localStorage
+
+    // document.querySelectorAll(".container").style.marginLeft = "250px"
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0"
+    localStorage.setItem("sidenavOpen", "false"); // Save the state in localStorage
+
+    // document.querySelectorAll(".container").style.marginLeft = "0"
+}
+function navigateWithClose(url) {
+    closeNav();
+    setTimeout(function() {
+        window.location.href = url; // Navigate to the URL after the sidenav closes
+    }, 300); // Adjust the timeout duration as necessary
+}
+
+ // On page load, check if the sidenav was previously opened
+ window.onload = function() {
+    const sidenavState = localStorage.getItem("sidenavOpen");
+    if (sidenavState === "true") {
+        document.getElementById("mySidenav").style.width = "250px"; // Keep sidenav open if it was open before
+    } else {
+        document.getElementById("mySidenav").style.width = "0"; // Ensure sidenav is closed if it was closed before
+    }
+}

@@ -14,51 +14,55 @@
         <div class="container">
             <nav>
                 <a href="index.html">
-                <div class="logo">
-                <img
-                    src="./images/netflix.jpg"
-                    class="img-fluid rounded-top"
-                    alt=""
-                />
-                <h2></h2>
-            </div>
-        </a>
-            <form id="form">
-            <input type="text" placeholder="searchmovies" id="search">
-        </form>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#movies">Movies</a></li>
-            <li><a href="tv-shows.html">TV Shows</a></li>
-        </ul>
+                    <div class="logo">
+                        <img src="./images/netflix.jpg" class="img-fluid rounded-top" alt="" />
+                        <h2>BoxFlick</h2>
+                    </div>
+                </a>
+                <div class="searchform">
+                    <form id="form">
+                        <input type="text" placeholder="searchmovies" id="search">
+                    </form>
+                </div>
+
+                <div class="fullNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#movies">Movies</a></li>
+                        <li><a href="tv-shows.html">TV Shows</a></li>
+                    </ul>
+                </div>
+
+                <div id="mySidenav" class="sidenav">
+
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" onclick="navigateWithClose('index.html')">Home</a>
+
+                        </li>
+                        <li> <a href="javascript:void(0)" onclick="navigateWithClose('#movies')">Movies</a>
+                        </li>
+                        <li> <a href="javascript:void(0)" onclick="navigateWithClose('tv-shows.html')">TV Shows</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <span class="sidenavToggle" onclick="openNav()">&#9776;</span>
             </nav>
 
         </div>
     </div>
     <header class="header">
         <div class="slider-container">
-            <div class="slide active" style="background-image: url('images/inception.jpg');">
-                <div class="slide-content">
-                    <h2 class="movie-title">Inception</h2>
-<p class="movie-desc">
-    A mind-bending sci-fi thriller directed by Christopher Nolan, exploring the concept of shared dreams and the fine line between reality and illusion. Dom Cobb, a skilled thief, embarks on a dangerous mission to plant an idea into someone's subconscious.
-</p>
-<div class="movie-details">
-    <p class="category">Science Fiction</p>
-    <p class="category">Thriller</p>
-    <p class="category">Action</p>
-    <p class="year">2010</p>
-</div>
-  <button type="button">
-                        <i class="fas fa-circle-play">Watch Now </i>
-                    </button>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('images/darkknight.jpg');">
+
+            <div class="slide active" style="background-image: url('images/darkknight.jpg');">
                 <div class="slide-content">
                     <h2 class="movie-title">The Dark Knight</h2>
                     <p class="movie-desc">
-                        A gripping tale of chaos and morality as Batman faces his ultimate nemesis, the Joker, in a battle that pushes Gotham City to the brink. Directed by Christopher Nolan, this film redefined superhero movies.
+                        A gripping tale of chaos and morality as Batman faces his ultimate nemesis, the Joker, in a
+                        battle that pushes Gotham City to the brink. Directed by Christopher Nolan, this film redefined
+                        superhero movies.
                     </p>
                     <div class="movie-details">
                         <p class="category">Action</p>
@@ -66,9 +70,29 @@
                         <p class="category">Drama</p>
                         <p class="year">2008</p>
                     </div>
-                    
+
                     <button type="button">
-                        <i class="fas fa-circle-play">Watch Now </i>
+                        <i class="watchBtn fas fa-circle-play">Watch Now </i>
+                    </button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('images/inception.jpg');">
+                <div class="slide-content">
+                    <h2 class="movie-title">Inception</h2>
+                    <p class="movie-desc">
+                        A mind-bending sci-fi thriller directed by Christopher Nolan, exploring the concept of shared
+                        dreams and the fine line between reality and illusion. Dom Cobb, a skilled thief, embarks on a
+                        dangerous mission to plant an idea into someone's subconscious.
+                    </p>
+                    <div class="movie-details">
+                        <p class="category">Science Fiction</p>
+                        <p class="category">Thriller</p>
+                        <p class="category">Action</p>
+                        <p class="year">2010</p>
+                    </div>
+
+                    <button type="button">
+                        <i class="watchBtn fas fa-circle-play">Watch Now </i>
                     </button>
                 </div>
             </div>
@@ -76,7 +100,9 @@
                 <div class="slide-content">
                     <h2 class="movie-title">Interstellar</h2>
                     <p class="movie-desc">
-                        A visually stunning epic by Christopher Nolan, where a team of astronauts ventures through a wormhole to save humanity. A profound exploration of love, sacrifice, and the unknown reaches of space.
+                        A visually stunning epic by Christopher Nolan, where a team of astronauts ventures through a
+                        wormhole to save humanity. A profound exploration of love, sacrifice, and the unknown reaches of
+                        space.
                     </p>
                     <div class="movie-details">
                         <p class="category">Science Fiction</p>
@@ -84,30 +110,36 @@
                         <p class="category">Drama</p>
                         <p class="year">2014</p>
                     </div>
-                    
+
                     <button type="button">
-                        <i class="fas fa-circle-play">Watch Now </i>
+                        <i class="watchBtn fas fa-circle-play">Watch Now </i>
                     </button>
                 </div>
             </div>
             <div class="slide" style="background-image: url('images/parasite.webp');">
                 <div class="slide-content">
                     <h2 class="movie-title">Parasite</h2>
-<p class="movie-desc">
-    A masterful satire by Bong Joon-ho that examines class disparity through the intertwined lives of a wealthy family and a struggling one. Winner of multiple Oscars, including Best Picture.
-</p>
-<div class="movie-details">
-    <p class="category">Drama</p>
-    <p class="category">Thriller</p>
-    <p class="category">Dark Comedy</p>
-    <p class="year">2019</p>
-</div>
-
-                    <button type="button">
-                        <i class="fas fa-circle-play">Watch Now </i>
-                    </button>
+                    <p class="movie-desc">
+                        Greed and class discrimination threaten the newly formed symbiotic relationship between the
+                        wealthy Park family and the destitute Kim clan.
+                    </p>
+                    
+                    <div class="movie-details">
+                        <p class="category">Dark Comedy</p>
+                        <p class="category">Tragedy</p>
+                        <p class="category">Drama</p>
+                        <p class="year">2019</p>
+                    </div>
+                    <div class="mb-5">
+                        <button type="button">
+                            <i class="watchBtn fas fa-circle-play">Watch Now </i>
+                        </button>
+                    </div>
+                 
+                   
                 </div>
             </div>
+
 
             <button class="arrow left-arrow" id="left">
                 <i class="fas fa-arrow-left"></i>
@@ -118,9 +150,9 @@
     </header>
     <div class="movies-content" id="movies">
         <div class="container">
-        <h1 class="label">Trending Movies</h1>
-        <div class="movies-details">
-            <!-- <div class="movies">
+            <h1 class="label">Trending Movies</h1>
+            <div class="movies-details">
+                <!-- <div class="movies">
                 <img src="images/sunshine.avif" alt="">
                 <p class="movie-title">Peaky Blinders</p>
                 <div class="movie-desc">
@@ -128,11 +160,11 @@
                 <p class="rating">8.0 </p>
             </div>
             </div> -->
-            
+
+            </div>
         </div>
-    </div>  
     </div>
-    <!-- /*<-------------------pagination-----------------------------> 
+    <!-- /*<-------------------pagination----------------------------->
     <div class="container">
         <div class="pagination">
             <ul>
