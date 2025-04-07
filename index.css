@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    
 }
 html{
     scroll-behavior: smooth ;
@@ -91,6 +91,63 @@ form input{
     form input{
         width: 150px;
         overflow: hidden;
+    }
+}
+.searchform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#form {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between the input and button */
+}
+
+#search {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 25px; /* Rounded corners for the input */
+    width: 250px; /* Adjust width of input */
+    transition: border-color 0.3s ease;
+}
+
+#search:focus {
+    outline: none;
+    border-color: #007BFF; /* Focus color */
+}
+
+.submit {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded corners for the button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.submit:active {
+    transform: scale(1); /* Return to normal size on click */
+}
+
+@media screen and (max-width: 480px) {
+    #search {
+        width: 200px; /* Reduce input width on small screens */
+    }
+
+    .submit {
+        font-size: 0.9rem; /* Adjust button size on small screens */
+        padding: 8px 18px;
     }
 }
 /* ==================================================================*/
